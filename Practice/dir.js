@@ -18,16 +18,8 @@ fs.mkdir('AsyncDir',function(){
     })
 })
 
-// setTimeout(function() {
-//     console.log('5 seconds have passed')
-// },5000)
 
 // fs.rmdirSync('newDir');
-
-
-// setTimeout(function() {
-//     console.log('7 seconds have passed')
-// },7000)
 
 // fs.rmdir('newDir',(err)=> {
 //     if (err) console.log(err);
@@ -35,3 +27,11 @@ fs.mkdir('AsyncDir',function(){
 //         console.log("\nDeleted directory: newDir");
 //     }
 // });
+
+// fs.unlink('./AsyncDir/output.txt', (err)=>{
+//     if(err)console.log(err);
+//     fs.rmdir('AsyncDir',(err)=>{
+//         if(err)console.log(err);
+//         console.log("\nDeleted directory:AsyncDir")
+//     })
+// })
