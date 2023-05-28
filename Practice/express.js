@@ -15,7 +15,7 @@ app.get('/profile/:id', function(req, res){
 })
 
 app.get('/profile/:name', function(req, res){
-    var data = {age:29,job:'hacker'}
+    var data = {age:29,job:'hacker',hobbies:['books','anime']}
 
     res.render('profile',{person:req.params.name,data:data})
 })
