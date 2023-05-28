@@ -13,6 +13,13 @@ app.get('/contact', function(req, res){
 app.get('/profile/:id', function(req, res){
     res.send('Request id :'+req.params.name)
 })
+
+app.get('/profile/:name', function(req, res){
+    var data = {age:29,job:'hacker'}
+
+    res.render('profile',{person:req.params.name,data:data})
+})
+
 // can also use req.params.id for same effect
 
 app.listen(3002);
