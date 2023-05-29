@@ -11,5 +11,14 @@
         <%- include('partials/nav') %>
         <h1>Contact ur mom</h1>
         <p>LMAO</p>
+        <form id="contact-form">
+        <label for="who">Who?</label>
+        <input type="text" name="who" value="<%= qs.person %>"/>
+        <label for="department">Department?</label>
+        <input type="department" name="department" value="<%= qs.dept %>"/>
+        <label for="email">Email</label>
+        <input type="email" name="email"/>
+        <input type="submit" value="submit" />
+    </form>
     </body>
 </html>
