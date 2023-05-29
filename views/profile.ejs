@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{background:grey;font:black; padding: 30px;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+            h1{font-size:48px;text-align:center;text-transform:uppercase;letter-spacing: 2px;}
+            h2{font-size:30px;text-align:center;text-transform:uppercase;letter-spacing: 2px;}
+            p,li{font-size:16px;text-align: center;}
+        </style>
+    </head>  
+    <body> 
+        <%- include('partials/nav') %>
+        <h1>Welcome <%= person %></h1>
+        <p><strong>Age: <%= data.age%></strong></p>
+        <p><strong>Job: <%= data.job%></strong></p>
+        <h2>Hobbies</h2>
+        <ul>
+            <% data.hobbies.forEach(function(item){%>
+                <li><%= item %></li>
+            <% })%>
+        </ul>
+        <p>Get rickrolled simp</p>
+    </body>
+</html>

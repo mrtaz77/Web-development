@@ -2,16 +2,14 @@ var express = require('express');
 
 var app = express();
 
-app.get('/', function(req, res){
-    res.send('Hello World');
+app.set('view engine', 'ejs');
+
+app.get('/home', function(req, res){
+    res.render('index')
 })
 
 app.get('/contact', function(req, res){
-    res.send('Contact');
-})
-
-app.get('/profile/:id', function(req, res){
-    res.send('Request id :'+req.params.name)
+    res.render('contact')
 })
 
 app.get('/profile/:name', function(req, res){
@@ -20,8 +18,4 @@ app.get('/profile/:name', function(req, res){
     res.render('profile',{person:req.params.name,data:data})
 })
 
-// can also use req.params.id for same effect
-
 app.listen(3002);
-
-
